@@ -1,0 +1,4 @@
+com\imooc\service\CategoryService.class
+com\imooc\service\impl\UserServiceImpl.class
+com\imooc\service\impl\CategoryServiceImpl.class
+com\imooc\service\UserService.class
