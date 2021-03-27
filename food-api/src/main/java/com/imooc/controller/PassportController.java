@@ -89,10 +89,12 @@ public class PassportController {
                 StringUtils.isBlank(password))
             return IMOOCJSONResult.errorMsg("用户名或密码不能位空");
 
-        //.实现注册
+        //1.实现登录
         Users result = userService.queryUserForLogin(username, MD5Utils.getMD5Str(password));
 
-        if (result == null) return IMOOCJSONResult.errorMsg("用户名或密码不正确");
+        if (result == null) {
+            return IMOOCJSONResult.errorMsg("用户名或密码不正确");
+        }
 
         result = setNullProperty(result);
 
@@ -103,7 +105,8 @@ public class PassportController {
 
     @ApiOperation(value = "退出登录",notes = "退出登录",httpMethod = "POST")
     @PostMapping("/logout")
-    public IMOOCJSONResult logout(@RequestBody String userId,HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public IMOOCJSONResult logout(@RequestBody String userId,
+                                  HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         //清除用户相关的cookie
         CookieUtils.deleteCookie(request,response,"user");

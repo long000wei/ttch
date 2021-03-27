@@ -24,10 +24,12 @@ public class Hello {
     @GetMapping("/hello/{msg}")
     public String hello(@PathVariable("msg") String msg){
 
-        logger.debug("debug:hello");
+
+        System.out.println(msg);
+/*        logger.debug("debug:hello");
         logger.info("info:hello");
         logger.warn("warn:hello");
-        logger.error("error:hello");
+        logger.error("error:hello");*/
         return msg;
     }
 
