@@ -1,26 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e92d7c1-d7dc-481a-bbaf-531257149ca8" name="Default Changelist" comment="" />
+    <list default="true" id="1e92d7c1-d7dc-481a-bbaf-531257149ca8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/AddressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/ShopCatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-api/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-common/src/main/java/com/imooc/utils/RedisOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-service/src/main/java/com/imooc/service/AddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-service/src/main/java/com/imooc/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-service/src/main/java/com/imooc/service/impl/AddressServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-service/src/main/java/com/imooc/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food-service/target/classes/com/imooc/service/AddressService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="G:/tools/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="G:\tools\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1lb1UDnElHY5DI9c0qltR52SPaY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../foodie-cloud/common/foodie-cloud-shared-pojo/src/main/java" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\code\foodie-cloud\platform\registry-center\src\main\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\code\foodie-cloud\common\foodie-cloud-shared-pojo\src\main\java" />
+      <recent name="G:\code\foodie-cloud\common\foodie-cloud-common\src\main\java" />
+      <recent name="G:\code\ttch\food-api\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="registry-center" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="1e92d7c1-d7dc-481a-bbaf-531257149ca8" name="Default Changelist" comment="" />
       <created>1607850990256</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607850990256</updated>
+      <workItem from="1616924664715" duration="3679000" />
+      <workItem from="1617020458482" duration="6036000" />
+      <workItem from="1617719038034" duration="4267000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1616925748647">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1616925748647" />
+    <state x="560" y="113" key="CommitChangelistDialog2" timestamp="1617724768121">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="560" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1617724768121" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1616924715570">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616924715570" />
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1617029971900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617029971900" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1617029971900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617029971900" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1617029971900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617029971900" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1617029971900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617029971900" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1617021080383">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617021080383" />
+    <state x="669" y="333" key="new project wizard" timestamp="1617024132892">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="669" y="333" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1617024132892" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617723895869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617723895869" />
   </component>
 </project>
