@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/common/foodie-cloud-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/common/foodie-cloud-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/common/foodie-cloud-shared-pojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/common/foodie-cloud-shared-pojo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/common/foodie-cloud-web-components/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/common/foodie-cloud-web-components/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/domain/item/foodie-item-pojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/domain/item/foodie-item-pojo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/platform/registry-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../foodie-cloud/platform/registry-center/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/food-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/food-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/food-mapper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/food-pojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/food-service/src/main/java" charset="UTF-8" />
+  </component>
+</project>

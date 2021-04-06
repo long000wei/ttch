@@ -2,8 +2,11 @@ package com.imooc.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
 
@@ -17,19 +20,39 @@ import javax.servlet.http.HttpSession;
  */
 @ApiIgnore
 @RestController
+@RequestMapping("/test")
 public class Hello {
 
     final static Logger logger = LoggerFactory.getLogger(Hello.class);
 
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    @GetMapping("/set")
+    public Object set(String key,String value) {
+
+        redisTemplate.opsForValue().set(key,value);
+        return "OK";
+    }
+
+    @GetMapping("/get")
+    public Object get(String key) {
+
+        String value = (String)redisTemplate.opsForValue().get(key);
+        return value;
+    }
+
+    @GetMapping("/del")
+    public Object del(String key) {
+
+        redisTemplate.delete(key);
+
+        return "OK";
+    }
+
     @GetMapping("/hello/{msg}")
     public String hello(@PathVariable("msg") String msg){
 
-
-        System.out.println(msg);
-/*        logger.debug("debug:hello");
-        logger.info("info:hello");
-        logger.warn("warn:hello");
-        logger.error("error:hello");*/
         return msg;
     }
 
