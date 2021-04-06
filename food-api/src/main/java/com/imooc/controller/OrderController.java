@@ -1,0 +1,47 @@
+package com.imooc.controller;
+
+
+
+
+import com.imooc.enums.PayMethod;
+import com.imooc.pojo.bo.SubmitOrderBO;
+import com.imooc.pojo.vo.MerchantOrdersVO;
+import com.imooc.utils.IMOOCJSONResult;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+/**
+ * @author 龙伟
+ * @Description:
+ * @date 2021/3/27 23:26
+ */
+@RequestMapping("/order")
+public class OrderController extends BaseController {
+
+    final static Logger logger = LoggerFactory.getLogger(OrderController.class);
+
+    //用户下单
+    @PostMapping("/create")
+    public IMOOCJSONResult create(@RequestBody SubmitOrderBO submitOrderBO) {
+
+        if (submitOrderBO.getPayMethod() != PayMethod.WEIXIN.type &&
+                submitOrderBO.getPayMethod() != PayMethod.ALIPAY.type) {
+            return IMOOCJSONResult.errorMsg("支付方式不支持");
+        }
+        //1 创建订单
+
+        //2 移除购物车中已结算的商品
+
+        //3 向支付中心发送当前订单，用于保持支付中心的订单数据
+        return null;
+    }
+
+
+
+
+
+}

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e92d7c1-d7dc-481a-bbaf-531257149ca8" name="Default Changelist" comment="">
+    <list default="true" id="1e92d7c1-d7dc-481a-bbaf-531257149ca8" name="Default Changelist" comment="redis优化购物车">
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/AddressController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/BaseController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/OrderController.java" afterDir="false" />
@@ -18,7 +17,6 @@
       <change afterPath="$PROJECT_DIR$/food-service/target/classes/com/imooc/service/AddressService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/Hello.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/food-api/src/main/java/com/imooc/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -89,6 +87,18 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -101,25 +111,60 @@
       <updated>1607850990256</updated>
       <workItem from="1616924664715" duration="3679000" />
       <workItem from="1617020458482" duration="6036000" />
-      <workItem from="1617719038034" duration="4267000" />
+      <workItem from="1617719038034" duration="4539000" />
     </task>
+    <task id="LOCAL-00001" summary="redis优化购物车">
+      <created>1617724926531</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617724926531</updated>
+    </task>
+    <task id="LOCAL-00002" summary="redis优化购物车">
+      <created>1617724936828</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617724936828</updated>
+    </task>
+    <task id="LOCAL-00003" summary="redis优化购物车">
+      <created>1617724959654</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617724959654</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="redis优化购物车" />
+    <option name="LAST_COMMIT_MESSAGE" value="redis优化购物车" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1616925748647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1616925748647" />
-    <state x="560" y="113" key="CommitChangelistDialog2" timestamp="1617724943949">
+    <state x="560" y="113" key="CommitChangelistDialog2" timestamp="1617725068227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1617724943949" />
+    <state x="560" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1617725068227" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1616924715570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
