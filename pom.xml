@@ -14,6 +14,7 @@
         <module>food-mapper</module>
         <module>food-service</module>
         <module>food-api</module>
+        <module>food-test</module>
     </modules>
 
     <parent>
@@ -125,7 +126,6 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.12</version>
         </dependency>
-
         <!-- 引入redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

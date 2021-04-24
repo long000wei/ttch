@@ -1,17 +1,24 @@
 package com.imooc.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.imooc.enums.CommentLevel;
 import com.imooc.mapper.*;
 import com.imooc.pojo.*;
 import com.imooc.pojo.vo.CommentLevelCountsVO;
+import com.imooc.pojo.vo.ItemCommentVO;
+import com.imooc.pojo.vo.SearchItemsVO;
+import com.imooc.pojo.vo.ShopcartVO;
 import com.imooc.service.ItemService;
+import com.imooc.utils.DesensitizationUtil;
+import com.imooc.utils.PagedGridResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * @author 龙伟
@@ -34,6 +41,9 @@ public class ItemServiceImpl implements ItemService {
     private ItemsParamMapper itemsParamMapper;
 
     @Autowired
+    private ItemsMapperCustom itemsMapperCustom;
+
+    @Autowired
     private ItemsCommentsMapper itemsCommentsMapper;
 
     @Transactional(propagation = Propagation.SUPPORTS)
@@ -44,7 +54,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
-    public List<ItemsImg> queryItemList(String itemId) {
+    public List<ItemsImg> queryItemImgList(String itemId) {
 
         Example itemsImgExp = new Example(ItemsImg.class);
         Example.Criteria criteria = itemsImgExp.createCriteria();
@@ -73,15 +83,23 @@ public class ItemServiceImpl implements ItemService {
         return itemsParamMapper.selectOneByExample(itemsImgExp);
     }
 
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
     public CommentLevelCountsVO queryCommentCounts(String itemId) {
+
         Integer goodCounts = getCommentCounts(itemId, CommentLevel.GOOD.type);
         Integer normalCounts = getCommentCounts(itemId, CommentLevel.NORMAL.type);
         Integer badCounts = getCommentCounts(itemId, CommentLevel.BAD.type);
+        Integer totalCounts = goodCounts + normalCounts + badCounts;
 
+        CommentLevelCountsVO countsVO = new CommentLevelCountsVO();
+        countsVO.setTotalCounts(totalCounts);
+        countsVO.setGoodCounts(goodCounts);
+        countsVO.setNormalCounts(normalCounts);
+        countsVO.setBadCounts(badCounts);
 
-
-
-
+        return countsVO;
     }
 
     @Transactional(propagation = Propagation.SUPPORTS)
@@ -94,4 +112,75 @@ public class ItemServiceImpl implements ItemService {
 
         return itemsCommentsMapper.selectCount(condition);
     }
+
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult queryPagedComments(String itemId, Integer level, Integer page, Integer pageSize) {
+
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("itemId",itemId);
+        map.put("level",level);
+
+        PageHelper.startPage(page,pageSize);
+
+        List<ItemCommentVO> list = itemsMapperCustom.queryItemComments(map);
+        for (ItemCommentVO vo : list) {
+            vo.setNickname(DesensitizationUtil.commonDisplay(vo.getNickname()));
+        }
+        return setterPageGrid(list,page);
+    }
+
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult searchItems(String keywords, String sort, Integer page, Integer pageSize) {
+
+        Map<String,Object> map = new HashMap<>();
+        map.put("keywords",keywords);
+        map.put("sort",sort);
+
+        PageHelper.startPage(page,pageSize);
+
+        List<SearchItemsVO> list = itemsMapperCustom.searchItems(map);
+
+        return setterPageGrid(list,page);
+    }
+
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult searchItems(Integer catId, String sort, Integer page, Integer pageSize) {
+        Map<String,Object> map = new HashMap<>();
+        map.put("catId",catId);
+        map.put("sort",sort);
+
+        PageHelper.startPage(page,pageSize);
+
+        List<SearchItemsVO> list = itemsMapperCustom.searchItemsByThirdCat(map);
+
+        return setterPageGrid(list,page);
+    }
+    PagedGridResult setterPageGrid(List<?> list,Integer page) {
+
+        PageInfo<?> pageList = new PageInfo<>(list);
+        PagedGridResult grid = new PagedGridResult();
+        grid.setPage(page);
+        grid.setRows(list);
+        grid.setTotal(pageList.getPages());
+        grid.setRecords(pageList.getTotal());
+
+        return grid;
+    }
+
+    @Override
+    public List<ShopcartVO> queryItemsBySpecIds(String specIds) {
+
+        String[] ids = specIds.split(",");
+        ArrayList<String> specIdsList = new ArrayList<>();
+        Collections.addAll(specIdsList,ids);
+
+        return itemsMapperCustom.queryItemsBySpecIds(specIdsList);
+    }
+
 }

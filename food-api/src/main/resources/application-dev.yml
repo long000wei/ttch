@@ -7,9 +7,8 @@ spring:
     password: root
   redis:
     database: 1
-    host: 192.168.10.100
+    host: 192.168.220.135
     port: 6379
-    password: imooc
 
 mybatis:
   configuration:

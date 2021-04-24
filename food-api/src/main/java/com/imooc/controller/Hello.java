@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import redis.clients.jedis.Jedis;
 import springfox.documentation.annotations.ApiIgnore;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,42 +26,12 @@ public class Hello {
 
     final static Logger logger = LoggerFactory.getLogger(Hello.class);
 
-    @Autowired
-    private RedisTemplate redisTemplate;
+    public static void main(String[] args) {
 
-    @GetMapping("/set")
-    public Object set(String key,String value) {
-
-        redisTemplate.opsForValue().set(key,value);
-        return "OK";
+        Jedis jedis = new Jedis("192.168.220.135",6379);
+        String pong = jedis.ping();
+        System.out.println(pong);
     }
 
-    @GetMapping("/get")
-    public Object get(String key) {
 
-        String value = (String)redisTemplate.opsForValue().get(key);
-        return value;
-    }
-
-    @GetMapping("/del")
-    public Object del(String key) {
-
-        redisTemplate.delete(key);
-
-        return "OK";
-    }
-
-    @GetMapping("/hello/{msg}")
-    public String hello(@PathVariable("msg") String msg){
-
-        return msg;
-    }
-
-    @GetMapping("/setSession")
-    public Object setSession(HttpServletRequest request){
-        HttpSession session = request.getSession();
-        session.setAttribute("userInfo","new user");
-        session.setMaxInactiveInterval(3600); //设置过期时间
-        return "Ok";
-    }
 }

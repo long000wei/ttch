@@ -17,7 +17,7 @@ import java.util.List;
  * @date 2021/3/27 23:32
  */
 @RestController
-@RequestMapping("shopcat")
+@RequestMapping("shopcart")
 public class ShopCatController extends BaseController{
 
     @Autowired
@@ -33,7 +33,7 @@ public class ShopCatController extends BaseController{
         System.out.println(shopcartBO);
         String shopcarJson = redisOperator.get(FOODIE_SHOPCART + ":" + userId);
         List<ShopcartBO> shopcartList = null;
-        if (StringUtils.isBlank(shopcarJson)) {
+        if (StringUtils.isNotBlank(shopcarJson)) {
             shopcartList = JsonUtils.jsonToList(shopcarJson,ShopcartBO.class);
             boolean isHaving = false;
             for (ShopcartBO sc : shopcartList) {

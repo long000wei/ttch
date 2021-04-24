@@ -19,9 +19,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class Swagger2 {
-    // 访问地址   http://localhost:8081/swagger-ui.html  原路径
+    // 访问地址   http://localhost:8082/swagger-ui.html  原路径
 
-    // 访问地址   http://localhost:8081/doc.html  路径
+    // 访问地址   http://localhost:8082/doc.html  路径
 
 
     //配置swagger 2 核心配置
@@ -32,7 +32,6 @@ public class Swagger2 {
                     .select().apis(RequestHandlerSelectors.basePackage("com.imooc.controller")) //指定controller包
                     .paths(PathSelectors.any()) //所有controller
                     .build();
-
 
     }
 

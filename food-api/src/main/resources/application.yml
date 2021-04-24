@@ -11,6 +11,10 @@ server:
 #
 ############################################################
 spring:
+  redis:
+    database: 1
+    host: 192.168.220.135
+    port: 6379
   datasource:                                           # 数据源的相关配置
     type: com.zaxxer.hikari.HikariDataSource          # 数据源类型：HikariCP
     driver-class-name: com.mysql.jdbc.Driver          # mysql驱动
